@@ -11,6 +11,10 @@ public class PlayerMove : MonoBehaviour
 
     float moveSpeed = 4.0f;
 
+    public Transform sparkPoint; //‹…‚ð”­ŽË‚·‚éˆÊ’u
+
+    public GameObject sparkPrefab;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +36,11 @@ public class PlayerMove : MonoBehaviour
             ,0
 
             );
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(sparkPrefab, sparkPoint.position, transform.rotation);
+        }
 
 
     }
