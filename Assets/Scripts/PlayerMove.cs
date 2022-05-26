@@ -24,6 +24,8 @@ public class PlayerMove : MonoBehaviour
 
         playerRigidbody = this.gameObject.GetComponent<Rigidbody>();
 
+        
+
     }
 
     // Update is called once per frame
@@ -40,6 +42,7 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(sparkPrefab, sparkPoint.position, transform.rotation);
+
         }
 
 

@@ -7,7 +7,7 @@ public class SparkMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Quaternion rotation = Quaternion.Euler(0, 0, 90);
     }
 
     // Update is called once per frame

@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sparkPoint: {fileID: 1928820743}
-  sparkPrefab: {fileID: 5829364038705228719, guid: 5a6094d8ea9660e4f9c2e46ecf7afa12, type: 3}
+  sparkPrefab: {fileID: 724478416875958789, guid: 5a6094d8ea9660e4f9c2e46ecf7afa12, type: 3}
 --- !u!54 &1408227897
 Rigidbody:
   m_ObjectHideFlags: 0
