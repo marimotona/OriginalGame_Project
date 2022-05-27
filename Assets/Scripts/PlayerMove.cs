@@ -41,7 +41,7 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(sparkPrefab, sparkPoint.position, transform.rotation);      
+            Instantiate(sparkPrefab, sparkPoint.position, Quaternion.Euler(0, 0, 90));      
 
 
         }
