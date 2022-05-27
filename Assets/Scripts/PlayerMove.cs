@@ -15,16 +15,16 @@ public class PlayerMove : MonoBehaviour
 
     public GameObject sparkPrefab;
 
+    
+   
+
 
     // Start is called before the first frame update
     void Start()
     {
         inputDirection = new Vector3(1, 0, 0);
 
-
         playerRigidbody = this.gameObject.GetComponent<Rigidbody>();
-
-        
 
     }
 
@@ -41,7 +41,8 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(sparkPrefab, sparkPoint.position, transform.rotation);
+            Instantiate(sparkPrefab, sparkPoint.position, transform.rotation);      
+
 
         }
 
