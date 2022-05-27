@@ -10,7 +10,15 @@ public class EnemyGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(enemyPrefabs, transform.position, transform.rotation);
+        InvokeRepeating("Spawn", 2f, 1.5f);
+    }
+
+    void Spawn()
+    {
+
+        Vector3 spawnPosition = new Vector3(Random.Range(-8f, 8f),transform.position.y, transform.position.z);
+
+        Instantiate(enemyPrefabs, spawnPosition, transform.rotation);
     }
 
     // Update is called once per frame
