@@ -15,4 +15,10 @@ public class EnemyMove : MonoBehaviour
     {
         transform.position -= new Vector3(0, Time.deltaTime, 0);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(gameObject);
+        Destroy(collision.gameObject);
+    }
 }
