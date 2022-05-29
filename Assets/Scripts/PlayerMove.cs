@@ -33,8 +33,8 @@ public class PlayerMove : MonoBehaviour
     {
 
         inputDirection = new Vector3(
-            Input.GetAxis("Horizontal"),
-            Input.GetAxis("Vertical")
+            Input.GetAxisRaw("Horizontal"),
+            Input.GetAxisRaw("Vertical")
             ,0
 
             );
