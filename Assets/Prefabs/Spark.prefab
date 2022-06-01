@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2085576617576053036}
   m_Layer: 0
   m_Name: Spark
-  m_TagString: Untagged
+  m_TagString: Spark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
