@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -21,6 +22,13 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameOverText.activeSelf == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SceneManager.LoadScene("Main");
+            }
+        }
         
     }
 
@@ -30,6 +38,7 @@ public class GameController : MonoBehaviour
         scoreText.text = "SCORE : " + score;
     }
 
+    
     public void GameOver()
     {
         gameOverText.SetActive(true);
