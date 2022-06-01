@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
 
-    Rigidbody playerRigidbody;
+    Rigidbody2D playerRigidbody;
 
     Vector3 inputDirection;
 
@@ -24,7 +24,7 @@ public class PlayerMove : MonoBehaviour
     {
         inputDirection = new Vector3(1, 0, 0);
 
-        playerRigidbody = this.gameObject.GetComponent<Rigidbody>();
+        playerRigidbody = this.gameObject.GetComponent<Rigidbody2D>();
 
     }
 

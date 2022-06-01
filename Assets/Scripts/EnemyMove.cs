@@ -23,11 +23,21 @@ public class EnemyMove : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        if (collision.CompareTag("Player") == true)
+        {
+            Instantiate(explosion, collision.transform.position, transform.rotation);
+        }
+        else if (collision.CompareTag("Spark") == true)
+        {
+            gameController.AddScore();
+        }
+
         Instantiate(explosion, transform.position, transform.rotation);
 
         Destroy(gameObject);
         Destroy(collision.gameObject);
 
-        gameController.AddScore();
+        
     }
 }
