@@ -18,4 +18,15 @@ public class OmochiMove : MonoBehaviour
     {
         transform.position -= new Vector3(0, Time.deltaTime, 0);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") == true)
+        {
+            gameController.AddScore();
+        }
+
+        Destroy(gameObject);
+    }
+
 }
