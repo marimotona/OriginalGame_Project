@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
 {
 
     public Text scoreText;
-    public GameObject gameOverText;
+    public GameObject gameOverText; 
 
     int score = 0;
 
@@ -17,20 +17,37 @@ public class GameController : MonoBehaviour
     {
         gameOverText.SetActive(false);
         scoreText.text = "SCORE : " + score;
+
+        
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {             
                 
-                
-        
         if (gameOverText.activeSelf == true)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                SceneManager.LoadScene("Main");
+
+                PlayerPrefs.SetInt("Score", score);
+                PlayerPrefs.Save();
+
+
+                //scoreText.text = PlayerPrefs.SetInt();
+
+                SceneManager.LoadScene("Result");
+
+               
             }
+
+        }
+        
+        if (SceneManager.GetActiveScene().name == "Result")
+        {
+            //PlayerPrefs.GetInt("Score");
+            scoreText.text = "Score : " + PlayerPrefs.GetInt("Score").ToString();
+
         }
         
     }
@@ -45,9 +62,8 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         gameOverText.SetActive(true);
+
+        
     }
-
-    
-
     
 }
