@@ -22,6 +22,9 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+                
+                
+        
         if (gameOverText.activeSelf == true)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -43,4 +46,8 @@ public class GameController : MonoBehaviour
     {
         gameOverText.SetActive(true);
     }
+
+    
+
+    
 }

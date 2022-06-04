@@ -31,14 +31,12 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         inputDirection = new Vector3(
             Input.GetAxisRaw("Horizontal"),
-            Input.GetAxisRaw("Vertical")
-            ,0
-
+            Input.GetAxisRaw("Vertical"),
+            0
             );
-
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(sparkPrefab, sparkPoint.position, Quaternion.Euler(0, 0, 90));      
@@ -53,4 +51,6 @@ public class PlayerMove : MonoBehaviour
     {
         playerRigidbody.velocity = inputDirection * moveSpeed;
     }
+
+    
 }
