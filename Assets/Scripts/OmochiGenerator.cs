@@ -10,10 +10,10 @@ public class OmochiGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Spawn", 4f, 2.5f);
+        //InvokeRepeating("Spawn", 4f, 2.5f);
     }
 
-    void Spawn()
+    public void Spawn()
     {
         Vector3 spawnPosition = new Vector3(Random.Range(-6f, 6f), transform.position.y, transform.position.z);
 

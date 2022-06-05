@@ -9,10 +9,14 @@ public class EnemyMove : MonoBehaviour
 
     GameController gameController;
 
+    OmochiGenerator omochiGenerator;
+
     // Start is called before the first frame update
     void Start()
     {
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
+
+        omochiGenerator = GameObject.Find("OmochiGenerator").GetComponent<OmochiGenerator>();
     }
 
     // Update is called once per frame
@@ -31,7 +35,9 @@ public class EnemyMove : MonoBehaviour
         }
         else if (collision.CompareTag("Spark") == true)
         {
-            gameController.AddScore();
+            //gameController.AddScore();
+            
+            omochiGenerator.Spawn();
         }
 
         Instantiate(explosion, transform.position, transform.rotation);
