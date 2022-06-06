@@ -39,6 +39,13 @@ public class EnemyMove : MonoBehaviour
             
             omochiGenerator.Spawn();
         }
+        
+         /*
+        else if (collision.CompareTag("Bullet") == true)
+        {
+            return;
+        }
+        */
 
         Instantiate(explosion, transform.position, transform.rotation);
 

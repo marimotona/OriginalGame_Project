@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spark
   - Omochi
+  - Bullet
   layers:
   - Default
   - TransparentFX

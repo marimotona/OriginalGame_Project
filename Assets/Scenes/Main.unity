@@ -623,6 +623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sparkPoint: {fileID: 1928820743}
   sparkPrefab: {fileID: 1772339156887025633, guid: 5a6094d8ea9660e4f9c2e46ecf7afa12, type: 3}
+  explosion: {fileID: 8191827498114240250, guid: 8d022bcf5410e1e4ba8f5c36e9a202e7, type: 3}
 --- !u!50 &1408227897
 Rigidbody2D:
   serializedVersion: 4
