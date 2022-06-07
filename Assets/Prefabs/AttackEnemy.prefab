@@ -135,3 +135,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefabs: {fileID: 3773770594111506847, guid: f3a6f95a2f6c1b242affdca240e4dd1d, type: 3}
+  explosion: {fileID: 8191827498114240250, guid: 8d022bcf5410e1e4ba8f5c36e9a202e7, type: 3}
