@@ -14,10 +14,10 @@ public class BulletMove : MonoBehaviour
         
     }
 
-    public void Setting(float angle)
+    public void Setting(float angle, float speed)
     {
-        dx = Mathf.Cos(angle);
-        dy = Mathf.Sin(angle);
+        dx = Mathf.Cos(angle) * speed;
+        dy = Mathf.Sin(angle) * speed;
     }
 
     // Update is called once per frame
