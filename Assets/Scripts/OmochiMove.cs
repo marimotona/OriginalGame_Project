@@ -25,6 +25,14 @@ public class OmochiMove : MonoBehaviour
         {
             gameController.AddScore();
         }
+        else if (collision.CompareTag("Spark") == true)
+        {
+            return;
+        }
+        else if (collision.CompareTag("Bullet") == true)
+        {
+            return;
+        }
 
         Destroy(gameObject);
     }
