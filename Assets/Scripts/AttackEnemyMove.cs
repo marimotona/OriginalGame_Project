@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttackEnemyMove : MonoBehaviour
 {
 
-    public GameObject bulletPrefabs;
+    public BulletMove bulletPrefabs;
 
     public GameObject explosion;
 
@@ -14,15 +14,17 @@ public class AttackEnemyMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Shot", 2f, 2f);
-        //Shot();
+        InvokeRepeating("Shot", 2f, 3f);
+        //Shot(Mathf.PI / 4f);
+        //Shot(-Mathf.PI / 4f);
 
         omochiGenerator = GameObject.Find("OmochiGenerator").GetComponent<OmochiGenerator>();
     }
 
     void Shot()
     {
-        Instantiate(bulletPrefabs, transform.position, transform.rotation);
+        BulletMove bullet = Instantiate(bulletPrefabs, transform.position, transform.rotation);
+        bullet.Setting(-Mathf.PI / 4f);
     }
 
     // Update is called once per frame

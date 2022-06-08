@@ -38,14 +38,12 @@ public class EnemyMove : MonoBehaviour
             //gameController.AddScore();
             
             omochiGenerator.Spawn();
-        }
-        
-         /*
+        }       
         else if (collision.CompareTag("Bullet") == true)
         {
             return;
         }
-        */
+        
 
         Instantiate(explosion, transform.position, transform.rotation);
 
