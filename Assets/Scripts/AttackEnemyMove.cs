@@ -17,7 +17,8 @@ public class AttackEnemyMove : MonoBehaviour
         //InvokeRepeating("Shot", 2f, 3f);
         //Shot(Mathf.PI / 4f);
         //Shot(-Mathf.PI / 4f);
-        ShotN(8, 3);
+
+        StartCoroutine(ShotNWaveM(4, 8));       
 
         omochiGenerator = GameObject.Find("OmochiGenerator").GetComponent<OmochiGenerator>();
     }
@@ -28,6 +29,15 @@ public class AttackEnemyMove : MonoBehaviour
         BulletMove bullet = Instantiate(bulletPrefabs, transform.position, transform.rotation);
         bullet.Setting(angle, speed);
         //bullet.Setting(Mathf.PI / 4f);
+    }
+
+    IEnumerator ShotNWaveM(int n, int m)
+    {
+        for (int w = 0; w < n; w++)
+        {
+            ShotN(m, 2);
+            yield return new WaitForSeconds(2f);
+        }
     }
     
     void ShotN(int count, float speed)
