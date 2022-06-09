@@ -24,6 +24,12 @@ public class BulletMove : MonoBehaviour
     void Update()
     {
         transform.position += new Vector3(dx, dy, 0) * Time.deltaTime;
+
+        if (transform.position.x < -9 || transform.position.x > 9 ||
+            transform.position.y < -6 || transform.position.y > 6)
+        {
+            Destroy(gameObject);
+        }
     }
 
     

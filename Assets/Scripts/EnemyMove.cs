@@ -23,6 +23,11 @@ public class EnemyMove : MonoBehaviour
     void Update()
     {
         transform.position -= new Vector3(0, Time.deltaTime, 0);
+
+        if (transform.position.y < -6)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

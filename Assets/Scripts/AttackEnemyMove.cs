@@ -18,7 +18,7 @@ public class AttackEnemyMove : MonoBehaviour
         //Shot(Mathf.PI / 4f);
         //Shot(-Mathf.PI / 4f);
 
-        StartCoroutine(ShotNWaveM(4, 8));       
+        StartCoroutine(WaveNShotM(4, 8));       
 
         omochiGenerator = GameObject.Find("OmochiGenerator").GetComponent<OmochiGenerator>();
     }
@@ -31,7 +31,7 @@ public class AttackEnemyMove : MonoBehaviour
         //bullet.Setting(Mathf.PI / 4f);
     }
 
-    IEnumerator ShotNWaveM(int n, int m)
+    IEnumerator WaveNShotM(int n, int m)
     {
         for (int w = 0; w < n; w++)
         {
@@ -55,6 +55,11 @@ public class AttackEnemyMove : MonoBehaviour
     void Update()
     {
         transform.position -= new Vector3(0, Time.deltaTime, 0);
+
+        if (transform.position.y < -6)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
