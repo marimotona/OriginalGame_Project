@@ -10,7 +10,7 @@ public class EnemyGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Spawn", 2f, 2f);
+        InvokeRepeating("Spawn", 2f, 1.5f);
     }
 
     void Spawn()
