@@ -19,6 +19,9 @@ public class PlayerMove : MonoBehaviour
 
     GameController gameController;
 
+    AudioSource audioSource;
+    public AudioClip shotSE;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +31,8 @@ public class PlayerMove : MonoBehaviour
         playerRigidbody = this.gameObject.GetComponent<Rigidbody2D>();
 
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
+
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -42,8 +47,8 @@ public class PlayerMove : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(sparkPrefab, sparkPoint.position, Quaternion.Euler(0, 0, 90));      
-
+            Instantiate(sparkPrefab, sparkPoint.position, Quaternion.Euler(0, 0, 90));
+            audioSource.PlayOneShot(shotSE);
 
         }
 

@@ -11,12 +11,16 @@ public class EnemyMove : MonoBehaviour
 
     OmochiGenerator omochiGenerator;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
 
         omochiGenerator = GameObject.Find("OmochiGenerator").GetComponent<OmochiGenerator>();
+
+        
     }
 
     // Update is called once per frame
@@ -42,6 +46,7 @@ public class EnemyMove : MonoBehaviour
         {
             //gameController.AddScore();
             
+
             omochiGenerator.Spawn();
         }       
         else if (collision.CompareTag("Bullet") == true)
@@ -54,6 +59,8 @@ public class EnemyMove : MonoBehaviour
 
         Destroy(gameObject);
         Destroy(collision.gameObject);
+
+        
 
         
     }
