@@ -52,13 +52,33 @@ public class GameController : MonoBehaviour
         
     }
 
-    public void AddScore()
+    public void AddScore1()
     {
+        /*
+       if(this.gameObject.CompareTag("Omochi"))
+       {
+            score += 100;
+            scoreText.text = "SCORE : " + score + "kg";
+       }
+       else if(this.gameObject.CompareTag("SpecialOmochi"))
+       {
+            score += 300;
+            scoreText.text = "SCORE : " + score + "kg";
+       }
+        */
+
         score += 100;
+        scoreText.text = "SCORE : " + score + "kg";
+        
+    }
+
+    public void AddScore2()
+    {
+        score += 300;
         scoreText.text = "SCORE : " + score + "kg";
     }
 
-    
+
     public void GameOver()
     {
         gameOverText.SetActive(true);
