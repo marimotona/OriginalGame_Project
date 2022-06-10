@@ -66,7 +66,11 @@ public class PlayerMove : MonoBehaviour
         {
             return;
         }
-        if (collision.CompareTag("Spark") == true)
+        else if (collision.CompareTag("SpecialOmochi") == true)
+        {
+            return;
+        }
+        else if (collision.CompareTag("Spark") == true)
         {
             return;
         }

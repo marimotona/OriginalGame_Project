@@ -9,7 +9,7 @@ public class AttackEnemyMove : MonoBehaviour
 
     public GameObject explosion;
 
-    OmochiGenerator omochiGenerator;
+    SpecialOmochiGenerator specialomochiGenerator;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class AttackEnemyMove : MonoBehaviour
         //StartCoroutine(WaveNShotM(4, 8));
         StartCoroutine(CPU());
 
-        omochiGenerator = GameObject.Find("OmochiGenerator").GetComponent<OmochiGenerator>();
+        specialomochiGenerator = GameObject.Find("SpecialOmochiGenerator").GetComponent<SpecialOmochiGenerator>();
     }
 
     void Shot(float angle, float speed)
@@ -80,7 +80,7 @@ public class AttackEnemyMove : MonoBehaviour
     {
         if (collision.CompareTag("Spark") == true)
         {
-            omochiGenerator.Spawn();
+            specialomochiGenerator.Spawn();
         }
         else if (collision.CompareTag("Bullet") == true)
         {
