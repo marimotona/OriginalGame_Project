@@ -66,6 +66,10 @@ public class PlayerMove : MonoBehaviour
         {
             return;
         }
+        if (collision.CompareTag("Spark") == true)
+        {
+            return;
+        }
 
         Instantiate(explosion, transform.position, transform.rotation);
 

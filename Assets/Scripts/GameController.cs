@@ -55,7 +55,7 @@ public class GameController : MonoBehaviour
     public void AddScore()
     {
         score += 100;
-        scoreText.text = "SCORE : " + score;
+        scoreText.text = "SCORE : " + score + "kg";
     }
 
     
