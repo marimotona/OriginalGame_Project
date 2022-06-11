@@ -54,6 +54,7 @@ public class GameController : MonoBehaviour
 
     public void AddScore1()
     {
+        
         /*
        if(this.gameObject.CompareTag("Omochi"))
        {
@@ -66,6 +67,7 @@ public class GameController : MonoBehaviour
             scoreText.text = "SCORE : " + score + "kg";
        }
         */
+        
 
         score += 100;
         scoreText.text = "SCORE : " + score + "kg";

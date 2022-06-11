@@ -23,7 +23,7 @@ public class OmochiMove : MonoBehaviour
     {
         if (collision.CompareTag("Player") == true)
         {
-            Debug.Log("‚¨–Ý");
+            //Debug.Log("‚¨–Ý");
             gameController.AddScore1();
         }
         else if (collision.CompareTag("Spark") == true)

@@ -626,6 +626,7 @@ MonoBehaviour:
   sparkPrefab: {fileID: 1772339156887025633, guid: 5a6094d8ea9660e4f9c2e46ecf7afa12, type: 3}
   explosion: {fileID: 8191827498114240250, guid: 8d022bcf5410e1e4ba8f5c36e9a202e7, type: 3}
   shotSE: {fileID: 8300000, guid: 1743f0d445b86480b8ecfdbc8c84a5f9, type: 3}
+  scoreSE: {fileID: 8300000, guid: b8aef482d0b860d4281ac14e2379045f, type: 3}
 --- !u!50 &1408227897
 Rigidbody2D:
   serializedVersion: 4

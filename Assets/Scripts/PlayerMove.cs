@@ -22,6 +22,8 @@ public class PlayerMove : MonoBehaviour
     AudioSource audioSource;
     public AudioClip shotSE;
 
+    public AudioClip scoreSE;
+
 
     // Start is called before the first frame update
     void Start()
@@ -64,10 +66,12 @@ public class PlayerMove : MonoBehaviour
     {
         if (collision.CompareTag("Omochi") == true)
         {
+            audioSource.PlayOneShot(scoreSE);
             return;
         }
         else if (collision.CompareTag("SpecialOmochi") == true)
         {
+            audioSource.PlayOneShot(scoreSE);
             return;
         }
         else if (collision.CompareTag("Spark") == true)

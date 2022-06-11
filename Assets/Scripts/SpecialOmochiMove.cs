@@ -23,7 +23,7 @@ public class SpecialOmochiMove : MonoBehaviour
     {
         if (collision.CompareTag("Player") == true)
         {
-            Debug.Log("“Á•Ê‚È‚¨–Ý");
+            //Debug.Log("“Á•Ê‚È‚¨–Ý");
             gameController.AddScore2();
         }
         else if (collision.CompareTag("Spark") == true)
