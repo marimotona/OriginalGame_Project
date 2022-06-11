@@ -25,6 +25,7 @@ public class SceneController : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            
             audioSource.PlayOneShot(startSE);
             SceneManager.LoadScene("Main");
             
