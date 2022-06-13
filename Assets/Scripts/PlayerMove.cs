@@ -7,10 +7,6 @@ public class PlayerMove : MonoBehaviour
 
     Rigidbody2D playerRigidbody;
 
-    //Vector3 inputDirection;
-
-    //float moveSpeed = 4.0f;
-
     public Transform sparkPoint; //‹…‚ð”­ŽË‚·‚éˆÊ’u
 
     public GameObject sparkPrefab;
@@ -24,17 +20,21 @@ public class PlayerMove : MonoBehaviour
 
     public AudioClip scoreSE;
 
+    public float time;
+
     
     // Start is called before the first frame update
     void Start()
     {
-        //inputDirection = new Vector3(1, 0, 0);
+        
 
         playerRigidbody = this.gameObject.GetComponent<Rigidbody2D>();
 
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
 
         audioSource = GetComponent<AudioSource>();
+
+        time = 1.0f;
 
     }
 
@@ -55,31 +55,30 @@ public class PlayerMove : MonoBehaviour
 
         transform.position = nextPosition;
 
-
-        //transform.position += new Vector3(x, y, 0) * Time.deltaTime * 4.0f;
+        time += Time.deltaTime;
+        if (time >= 1.0f)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Instantiate(sparkPrefab, sparkPoint.position, Quaternion.Euler(0, 0, 90));
+                audioSource.PlayOneShot(shotSE);
+                time = 0.0f;
+            }
+        }
+        
         /*
-        inputDirection = new Vector3(
-            Input.GetAxisRaw("Horizontal"),
-            Input.GetAxisRaw("Vertical"),
-            0
-            );
-        */
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(sparkPrefab, sparkPoint.position, Quaternion.Euler(0, 0, 90));
             audioSource.PlayOneShot(shotSE);
 
         }
+        */
 
 
     }
 
-    /*
-    private void FixedUpdate()
-    {
-        playerRigidbody.velocity = inputDirection * moveSpeed;
-    }
-    */
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
