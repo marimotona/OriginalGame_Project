@@ -183,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 744613898}
   gameOverText: {fileID: 515422108}
+  nextSceneText: {fileID: 515422108}
 --- !u!82 &381759576
 AudioSource:
   m_ObjectHideFlags: 0

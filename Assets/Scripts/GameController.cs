@@ -8,7 +8,8 @@ public class GameController : MonoBehaviour
 {
 
     public Text scoreText;
-    public GameObject gameOverText; 
+    public GameObject gameOverText;
+    public GameObject nextSceneText;
 
     int score = 0;
 
@@ -16,6 +17,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         gameOverText.SetActive(false);
+        nextSceneText.SetActive(false);
         scoreText.text = "SCORE : " + score;
 
         
@@ -42,8 +44,8 @@ public class GameController : MonoBehaviour
             }
 
         }
-        
-        if (SceneManager.GetActiveScene().name == "Result")
+
+            if (SceneManager.GetActiveScene().name == "Result")
         {
             //PlayerPrefs.GetInt("Score");
             scoreText.text = "Score : " + PlayerPrefs.GetInt("Score").ToString() + "kg";
@@ -84,8 +86,9 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         gameOverText.SetActive(true);
+        nextSceneText.SetActive(true);
 
-        
+
     }
     
 }
