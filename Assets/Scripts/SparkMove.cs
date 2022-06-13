@@ -13,6 +13,12 @@ public class SparkMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(0, 2f, 0) * Time.deltaTime;        
+        transform.position += new Vector3(0, 2f, 0) * Time.deltaTime;
+
+        if (transform.position.x < -8.5 || transform.position.x > 8.5 ||
+            transform.position.y < -4.5 || transform.position.y > 4.5)
+        {
+            Destroy(gameObject);
+        }
     }
 }
