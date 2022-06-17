@@ -32,6 +32,11 @@ public class SceneController : MonoBehaviour
         }
                 
     }
+    
+    public void OnClickButton()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
 
     /*
     private IEnumerator DelayCoroutine()

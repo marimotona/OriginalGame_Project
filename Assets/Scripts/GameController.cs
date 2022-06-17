@@ -46,12 +46,12 @@ public class GameController : MonoBehaviour
 
         }
 
-            if (SceneManager.GetActiveScene().name == "Result")
-        {
+        if (SceneManager.GetActiveScene().name == "Result")
+            {
             //PlayerPrefs.GetInt("Score");
             scoreText.text = "Score : " + PlayerPrefs.GetInt("Score").ToString() + "kg";
 
-        }
+            }
         
     }
 
