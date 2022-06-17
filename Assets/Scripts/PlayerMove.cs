@@ -25,8 +25,7 @@ public class PlayerMove : MonoBehaviour
     
     // Start is called before the first frame update
     void Start()
-    {
-        
+    {       
 
         playerRigidbody = this.gameObject.GetComponent<Rigidbody2D>();
 
@@ -46,6 +45,7 @@ public class PlayerMove : MonoBehaviour
         float y = Input.GetAxisRaw("Vertical");
 
 
+        //ƒvƒŒƒCƒ„[‚ÌˆÚ“®§ŒÀ
         Vector3 nextPosition = transform.position + new Vector3(x, y, 0) * Time.deltaTime * 4.0f;
         nextPosition = new Vector3(
             Mathf.Clamp(nextPosition.x, -8.5f, 8.5f),
@@ -55,8 +55,9 @@ public class PlayerMove : MonoBehaviour
 
         transform.position = nextPosition;
 
+        //’e‚Ì”­ŽË§ŒÀ
         time += Time.deltaTime;
-        if (time >= 1.5f)
+        if (time >= 1.0f)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -65,17 +66,6 @@ public class PlayerMove : MonoBehaviour
                 time = 0.0f;
             }
         }
-        
-        /*
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Instantiate(sparkPrefab, sparkPoint.position, Quaternion.Euler(0, 0, 90));
-            audioSource.PlayOneShot(shotSE);
-
-        }
-        */
-
-
     }
 
     

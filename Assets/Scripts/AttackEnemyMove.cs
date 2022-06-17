@@ -14,11 +14,7 @@ public class AttackEnemyMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //InvokeRepeating("Shot", 2f, 3f);
-        //Shot(Mathf.PI / 4f);
-        //Shot(-Mathf.PI / 4f);
-
-        //StartCoroutine(WaveNShotM(4, 8));
+        
         StartCoroutine(CPU());
 
         specialomochiGenerator = GameObject.Find("SpecialOmochiGenerator").GetComponent<SpecialOmochiGenerator>();
@@ -32,6 +28,7 @@ public class AttackEnemyMove : MonoBehaviour
         //bullet.Setting(Mathf.PI / 4f);
     }
 
+    //攻撃の弾の方向管理
     IEnumerator CPU()
     {
         while (true)
@@ -53,6 +50,7 @@ public class AttackEnemyMove : MonoBehaviour
     }
     
     
+    //攻撃の弾の発射アングルとスピード
     void ShotN(int count, float speed)
     {
         int bulletCount = count;

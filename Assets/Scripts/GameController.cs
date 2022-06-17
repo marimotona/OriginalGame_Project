@@ -32,6 +32,7 @@ public class GameController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
 
+                //ÉXÉRÉAÇÃï€ë∂
                 PlayerPrefs.SetInt("Score", score);
                 PlayerPrefs.Save();
 
@@ -55,22 +56,7 @@ public class GameController : MonoBehaviour
     }
 
     public void AddScore1()
-    {
-        
-        /*
-       if(this.gameObject.CompareTag("Omochi"))
-       {
-            score += 100;
-            scoreText.text = "SCORE : " + score + "kg";
-       }
-       else if(this.gameObject.CompareTag("SpecialOmochi"))
-       {
-            score += 300;
-            scoreText.text = "SCORE : " + score + "kg";
-       }
-        */
-        
-
+    {     
         score += 100;
         scoreText.text = "SCORE : " + score + "kg";
         
@@ -87,7 +73,6 @@ public class GameController : MonoBehaviour
     {
         gameOverText.SetActive(true);
         nextSceneText.SetActive(true);
-
 
     }
     

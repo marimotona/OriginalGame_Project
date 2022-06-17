@@ -15,6 +15,7 @@ public class SparkMove : MonoBehaviour
     {
         transform.position += new Vector3(0, 2f, 0) * Time.deltaTime;
 
+        //’e‚Ì”ÍˆÍ§ŒÀ
         if (transform.position.x < -8.5 || transform.position.x > 8.5 ||
             transform.position.y < -4.5 || transform.position.y > 4.5)
         {

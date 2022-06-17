@@ -587,7 +587,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e75df5cd9c1f944ce99e585d983fa119, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -834,6 +834,7 @@ MonoBehaviour:
   explosion: {fileID: 8191827498114240250, guid: 8d022bcf5410e1e4ba8f5c36e9a202e7, type: 3}
   shotSE: {fileID: 8300000, guid: 1743f0d445b86480b8ecfdbc8c84a5f9, type: 3}
   scoreSE: {fileID: 8300000, guid: b8aef482d0b860d4281ac14e2379045f, type: 3}
+  time: 0
 --- !u!50 &1408227897
 Rigidbody2D:
   serializedVersion: 4
@@ -912,7 +913,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
