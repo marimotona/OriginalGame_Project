@@ -30,7 +30,23 @@ public class SceneController : MonoBehaviour
             SceneManager.LoadScene("Main");
             
         }
-                
+
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SceneManager.LoadScene("NextTutorial");
+            }
+        }
+
+        if (SceneManager.GetActiveScene().name == "NextTutorial")
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SceneManager.LoadScene("Title");
+            }
+        }
+
     }
     
     public void OnClickButton()
